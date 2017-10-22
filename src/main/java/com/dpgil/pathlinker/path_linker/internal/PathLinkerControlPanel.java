@@ -1,9 +1,6 @@
-package com.dpgil.pathlinker.path_linker.internal.view;
+package com.dpgil.pathlinker.path_linker.internal;
 
-import com.dpgil.pathlinker.path_linker.internal.event.PathLinkerNodeSelectionListener;
-import com.dpgil.pathlinker.path_linker.internal.model.PathLinkerModel;
-import com.dpgil.pathlinker.path_linker.internal.util.EdgeWeightSetting;
-import com.dpgil.pathlinker.path_linker.internal.util.Algorithms.Path;
+import com.dpgil.pathlinker.path_linker.internal.Algorithms.Path;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -83,13 +80,13 @@ public class PathLinkerControlPanel extends JPanel implements CytoPanelComponent
 
 	private JButton _helpBtn;
 	private JButton _aboutBtn;
-	public static JButton _loadNodeToSourceButton;
-	public static JButton _loadNodeToTargetButton;
+	protected static JButton _loadNodeToSourceButton;
+	protected static JButton _loadNodeToTargetButton;
 	private JButton _clearSourceTargetPanelButton;
 	private JButton _submitButton;
 	private JButton _closeButton;
 
-	public static JComboBox<String> _networkCmb;
+	protected static JComboBox<String> _networkCmb;
 	protected static JComboBox<String> _edgeWeightColumnBox;
 	private static ButtonGroup _weightedOptionGroup;
 	private static JRadioButton _unweighted;
@@ -97,14 +94,14 @@ public class PathLinkerControlPanel extends JPanel implements CytoPanelComponent
 	private static JRadioButton _weightedProbabilities;
 
 	private JCheckBox _allowSourcesTargetsInPathsOption;
-	public static  JCheckBox _targetsSameAsSourcesOption;
+	protected static  JCheckBox _targetsSameAsSourcesOption;
 	private JCheckBox _includePathScoreTiesOption;
 
 	private CyServiceRegistrar _serviceRegistrar;
 
 	/** Cytoscape class for network and view management */
 	private CySwingApplication _cySwingApp;
-	public static CyApplicationManager _applicationManager;
+	protected static CyApplicationManager _applicationManager;
 	private static CyNetworkManager _networkManager;
 	private CyAppAdapter _adapter;
 
@@ -142,11 +139,11 @@ public class PathLinkerControlPanel extends JPanel implements CytoPanelComponent
 	/** The map stores the index-SUID pair of each network inside the networkCmb */
     protected static Map<Integer, Long> _indexToSUIDMap;
     /** The map stores the SUID-index pair of each network inside the networkCmb */
-    public static Map<Long, Integer> _suidToIndexMap;
+    protected static Map<Long, Integer> _suidToIndexMap;
 	/** The map stores the SUID to path index column name pair of each network */
-    public static Map<Long, String> _suidToPathIndexMap;
+    protected static Map<Long, String> _suidToPathIndexMap;
     /** The map stores path index column name to SUID pair of each network */
-    public static Map<String, Long> _pathIndexToSuidMap;
+    protected static Map<String, Long> _pathIndexToSuidMap;
     /** Global sync index number to sync network, Path Index, and result names upon creation */
     protected static int nameIndex;
 
@@ -435,7 +432,7 @@ public class PathLinkerControlPanel extends JPanel implements CytoPanelComponent
 	 * construct/update the combo box items for selecting edge weight
 	 * Called by PathLinkerNetworkEventListener and PathLinkerColumnUpdateListener class if event triggered
 	 */
-	public static void updateEdgeWeightColumn() {
+	protected static void updateEdgeWeightColumn() {
 
 		_edgeWeightColumnBox.removeAllItems(); //remove all items for update
 
@@ -461,7 +458,7 @@ public class PathLinkerControlPanel extends JPanel implements CytoPanelComponent
 	 * Use when the PathLinker starts
 	 *     when network name is changed
 	 */
-	public static void initializeNetworkCmb() {
+	protected static void initializeNetworkCmb() {
 	    
 	  //make sure combo box and related maps is empty when initializing
 	    _networkCmb.removeAllItems();

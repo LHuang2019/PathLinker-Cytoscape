@@ -21,9 +21,7 @@ import org.cytoscape.model.CyNode;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.dpgil.pathlinker.path_linker.internal.model.PathLinkerModel;
-import com.dpgil.pathlinker.path_linker.internal.util.EdgeWeightSetting;
-import com.dpgil.pathlinker.path_linker.internal.util.Algorithms.Path;
+import com.dpgil.pathlinker.path_linker.internal.Algorithms.Path;
 
 /** JUnit Test class for the PathLinker */
 public class PathLinkerModelTest {

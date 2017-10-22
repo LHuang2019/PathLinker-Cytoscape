@@ -1,11 +1,9 @@
-package com.dpgil.pathlinker.path_linker.internal.event;
+package com.dpgil.pathlinker.path_linker.internal;
 
 import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.events.RowSetRecord;
 import org.cytoscape.model.events.RowsSetEvent;
 import org.cytoscape.model.events.RowsSetListener;
-
-import com.dpgil.pathlinker.path_linker.internal.view.PathLinkerControlPanel;
 
 /** Listener class for _loadNodeToSourceButton and _loadNodeToTargetButton in PathLinkerPanel class */
 public class PathLinkerNodeSelectionListener implements RowsSetListener {

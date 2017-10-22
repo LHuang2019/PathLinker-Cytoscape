@@ -1,4 +1,4 @@
-package com.dpgil.pathlinker.path_linker.internal.event;
+package com.dpgil.pathlinker.path_linker.internal;
 
 import org.cytoscape.model.events.ColumnCreatedEvent;
 import org.cytoscape.model.events.ColumnCreatedListener;
@@ -6,8 +6,6 @@ import org.cytoscape.model.events.ColumnDeletedEvent;
 import org.cytoscape.model.events.ColumnDeletedListener;
 import org.cytoscape.model.events.ColumnNameChangedEvent;
 import org.cytoscape.model.events.ColumnNameChangedListener;
-
-import com.dpgil.pathlinker.path_linker.internal.view.PathLinkerControlPanel;
 
 /**
  * Listener class for _edgeWeightColumnBox in PathLinkerPanel class

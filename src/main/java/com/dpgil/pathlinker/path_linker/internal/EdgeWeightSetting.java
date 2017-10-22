@@ -1,4 +1,4 @@
-package com.dpgil.pathlinker.path_linker.internal.util;
+package com.dpgil.pathlinker.path_linker.internal;
 
 /**
  * Setting of the edge weight selected by the user

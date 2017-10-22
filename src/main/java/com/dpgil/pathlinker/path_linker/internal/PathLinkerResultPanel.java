@@ -1,4 +1,6 @@
-package com.dpgil.pathlinker.path_linker.internal.view;
+package com.dpgil.pathlinker.path_linker.internal;
+
+import com.dpgil.pathlinker.path_linker.internal.Algorithms.Path;
 
 import java.awt.Component;
 import java.awt.Container;
@@ -36,8 +38,6 @@ import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNetworkManager;
 import org.cytoscape.model.CyNode;
 import org.cytoscape.model.CyTableUtil;
-
-import com.dpgil.pathlinker.path_linker.internal.util.Algorithms.Path;
 
 /**
  * // -------------------------------------------------------------------------
