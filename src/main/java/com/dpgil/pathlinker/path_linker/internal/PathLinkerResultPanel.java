@@ -110,7 +110,7 @@ public class PathLinkerResultPanel extends JPanel implements CytoPanelComponent 
         public void actionPerformed(ActionEvent e) {
 
             // create error messages
-            StringBuilder errorMessage = new StringBuilder("Following item(s) will be permanently removed: \n");
+            StringBuilder errorMessage = new StringBuilder("This action will delete the following item(s) permanently:\n");
 
             if (_networkManager.getNetwork(_currentNetwork.getSUID()) != null)
                 errorMessage.append("<html><b>Network:</b> " +
